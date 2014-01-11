@@ -1,6 +1,6 @@
 Malloc
 ======
-
+This program simulates the malloc and free functions including error checking for freeing of non-alocated memory, double freeing, etc.
 
 
  The implementation uses the heap with the function call sbrk(). The free function take in a size and two hidden parameters file and lineNo for user error information. The function will allocate memory space and track it via a struct MemEntry. It first starts by finding a place in memory, if there exists one, it will return the address to the memory location, otherwise the function will increase the heap by size of struct MemEntry and needed size of allocated memory and will create a new struct MemEntry followed by returning an address to the needed memory amount.!
